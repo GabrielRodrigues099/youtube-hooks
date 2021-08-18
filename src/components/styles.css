@@ -1,0 +1,22 @@
+#root{
+    background-color: rgb(255, 234, 234) ;
+}
+.content{
+    padding: 20px;
+}
+.search__form{
+    background-color: rgb(255, 234, 234) !important;
+}
+@media(max-width: 1150px){
+    .wrapper{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .margin__column{
+        margin-bottom: 15px !important;
+    }
+    .space__column .ui.column.grid>[class*="five wide"].column, .ui.grid>.column.row>[class*="five wide"].column, .ui.grid>.row>[class*="five wide"].column, .ui.grid>[class*="five wide"].column{
+        width: 100% !important;
+    }
+}

@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import useVideos from '../hooks/useVideos';
+import './styles.css';
 
 const App = () => {
     
@@ -14,14 +15,14 @@ const App = () => {
     }, [videos])
 
     return (
-        <div className='ui container'>
+        <div className='ui container content' style={{background: '#fafafa'}}>
             <SearchBar title='Buscador de vídeos' onFormSubmit={search} />
             <div className='ui grid'>
-                <div className='ui row'>
-                    <div className='eleven wide column'>
+                <div className='wrapper ui row'>
+                    <div className='eleven wide column margin__column'>
                         <VideoDetail video={selectedVideo} />
                     </div>
-                    <div className='five wide column'>
+                    <div className='five wide column space__column'>
                         <VideoList
                          onVideoSelect={setSelectedVideo} 
                          videos={videos} 

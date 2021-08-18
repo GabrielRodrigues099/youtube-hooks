@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css'
 
 const SearchBar = ({ onFormSubmit, title }) => {
     const [term, setTerm] = useState('');
@@ -11,7 +12,7 @@ const SearchBar = ({ onFormSubmit, title }) => {
     };
 
     return (
-        <div className='search-bar ui segment'>
+        <div className='search-bar ui segment search__form'>
             <form onSubmit={onSubmit} className='ui form'>
                 <div className='field'>
                     <label>{title}</label>
